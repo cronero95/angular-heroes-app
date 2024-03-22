@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 
 import { HeroesRoutingModule } from './heroes-routing.module';
+import { MaterialModule } from '../material/material.module';
+import { CommonModule } from '@angular/common';
 
 import { HeroPageComponent } from './pages/hero-page/hero-page.component';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
@@ -18,7 +20,9 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
     SearchPageComponent
   ],
   imports: [
-    HeroesRoutingModule
+    HeroesRoutingModule,
+    MaterialModule,
+    CommonModule
   ]
 })
 export class HeroesModule { }
