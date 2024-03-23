@@ -11,6 +11,8 @@ import { NewHeroPageComponent } from './pages/new-hero-page/new-hero-page.compon
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { CardComponent } from './components/card/card.component';
 
+import { HeroImagePipe } from './pipes/hero-image.pipe';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { CardComponent } from './components/card/card.component';
     ListPageComponent,
     NewHeroPageComponent,
     SearchPageComponent,
-    CardComponent
+    CardComponent,
+    HeroImagePipe
   ],
   imports: [
     HeroesRoutingModule,
