@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Are you sure?</h2>
+
+<mat-dialog-content>
+  <p>This process is not reversible, you will delete HERO</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Go back</button>
+  <span class="spacer"></span>
+  <button mat-button (click)="onConfirm()">Ok</button>
+</mat-dialog-actions>

@@ -80,7 +80,7 @@
 
         <div class="flex justify-content-between">
 
-          <button *ngIf="currentHero.id" mat-flat-button color="warn">
+          <button *ngIf="currentHero.id" mat-flat-button color="warn" (click)="onDeleteHero()">
             Delete <mat-icon>delete_forever</mat-icon>
           </button>
 
