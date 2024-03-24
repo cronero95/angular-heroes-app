@@ -146,22 +146,6 @@
       "characters": "Matthew Michael Murdock"
     },
     {
-      "id": "marvel-hawkeye",
-      "superhero": "Hawkeye",
-      "publisher": "Marvel Comics",
-      "alter_ego": "Clinton Francis Barton",
-      "first_appearance": "Tales of Suspense #57",
-      "characters": "Clinton Francis Barton"
-    },
-    {
-      "id": "marvel-cyclops",
-      "superhero": "Cyclops",
-      "publisher": "Marvel Comics",
-      "alter_ego": "Scott Summers",
-      "first_appearance": "X-Men #1",
-      "characters": "Scott Summers"
-    },
-    {
       "id": "marvel-silver",
       "superhero": "Silver Surfer",
       "publisher": "Marvel Comics",
