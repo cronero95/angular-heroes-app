@@ -21,7 +21,8 @@
       "publisher": "DC Comics",
       "alter_ego": "Kal-El",
       "first_appearance": "Action Comics #1",
-      "characters": "Kal-El"
+      "characters": "Kal-El",
+      "alt_img": null
     },
     {
       "id": "dc-flash",
@@ -29,7 +30,8 @@
       "publisher": "DC Comics",
       "alter_ego": "Jay Garrick",
       "first_appearance": "Flash Comics #1",
-      "characters": "Jay Garrick, Barry Allen, Wally West, Bart Allen"
+      "characters": "Jay Garrick, Barry Allen, Wally West, Bart Allen",
+      "alt_img": "https://i.pinimg.com/736x/76/4a/2f/764a2f1536eecc72395ec395d1f7a0ab.jpg"
     },
     {
       "id": "dc-green",
@@ -166,6 +168,24 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "NSGFh_T",
+      "superhero": "Plastic Man",
+      "publisher": "DC Comics",
+      "alter_ego": "Eel O'Brian",
+      "first_appearance": "Police Comics #1",
+      "characters": "Patrick \"Eel\" O'Brian, Eel O'Brian",
+      "alt_img": "https://www.zonanegativa.com/imagenes/2018/06/PLASTIC-4-600x911.jpg"
+    },
+    {
+      "id": "cZoHvyN",
+      "superhero": "Spider-Punk",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Hobart \"Hobie\" Brown",
+      "first_appearance": "The Amazing Spider-Man Vol. 3 #10",
+      "characters": "Hobart \"Hobie\" Brown",
+      "alt_img": "https://upload.wikimedia.org/wikipedia/en/b/bb/Spider-Punk_%28Hobart_Brown%29.jpg"
     }
   ]
 }

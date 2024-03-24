@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Hero, Publisher } from '../../interfaces/hero.interface';
 import { HeroesService } from '../../services/heroes.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { switchMap } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'heroes-new-hero-page',
   templateUrl: './new-hero-page.component.html',
   styles: ``
 })
-export class NewHeroPageComponent {
+export class NewHeroPageComponent implements OnInit {
 
   public heroForm = new FormGroup({
     id: new FormControl(''),
@@ -26,8 +29,26 @@ export class NewHeroPageComponent {
   ]
 
   constructor(
-    private heroService: HeroesService
+    private heroService: HeroesService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    private snackBar: MatSnackBar
   ) {}
+
+  ngOnInit(): void {
+    if(!this.router.url.includes('edit')) return;
+
+    this.activatedRoute.params
+      .pipe(
+        switchMap( ({id}) => this.heroService.getHeroById(id))
+      )
+      .subscribe( hero => {
+        if(!hero) return this.router.navigateByUrl('/heroes/list');
+
+        this.heroForm.reset(hero);
+        return;
+      });
+  }
 
   get currentHero(): Hero {
     const hero = this.heroForm.value as Hero;
@@ -40,7 +61,7 @@ export class NewHeroPageComponent {
     if(this.currentHero.id) {
       this.heroService.updateHero(this.currentHero)
         .subscribe(hero =>{
-        // TODO: Add snackbar
+          this.showSnackBar(`${hero.superhero} Updated!`);
         })
 
       return;
@@ -49,7 +70,15 @@ export class NewHeroPageComponent {
     this.heroService.addHero(this.currentHero)
       .subscribe(hero =>{
       // TODO: Add snackbar and go to /heroes/edit/hero.id
+        this.showSnackBar(`${hero.superhero} Created!`);
+        this.router.navigateByUrl(`/heroes/list/${hero.id}`);
       })
+  }
+
+  showSnackBar(message: string) {
+    this.snackBar.open(message, 'Done', {
+      duration: 2500
+    });
   }
 
 }

@@ -1,5 +1,7 @@
-<h2>
-  Edit <small>superhero</small>
+<h2 class="text-center">
+  {{ currentHero.id ? 'Edit' : 'Create' }}
+  <span *ngIf="currentHero.id">{{ currentHero.superhero }}</span>
+  <span *ngIf="!currentHero.id">New Super Hero</span>
 </h2>
 
 <mat-divider class="mb-2"></mat-divider>
@@ -78,9 +80,11 @@
 
         <div class="flex justify-content-between">
 
-          <button mat-flat-button color="warn">
+          <button *ngIf="currentHero.id" mat-flat-button color="warn">
             Delete <mat-icon>delete_forever</mat-icon>
           </button>
+
+          <span></span>
 
           <button mat-flat-button color="primary" (click)="onSubmit()">
             Save <mat-icon>save</mat-icon>
