@@ -1,0 +1,20 @@
+[33m13917c7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Define the rective form a its elements.
+[33m6c14a51[m[33m ([m[1;31morigin/main[m[33m)[m Implement the methods to create, update and delete
+[33meacc0fc[m Prepare 'new-hero' component structure.
+[33m3fbeedc[m Search heroes using autocomplete de Material.
+[33m159d695[m Create a service to search heroes by a query.
+[33m7fae534[m Add structure to the 'hero-page' component.
+[33m5b1b1ef[m Get a hero using his id from our server.
+[33me459dd1[m Show an image in the 'card' component.
+[33m968a1da[m Create 'card' component to show info about heroes.
+[33m6fef569[m Get heroes from our development server.
+[33mad7f6ce[m Configurate environment variables to json server.
+[33m7afa5da[m Prepare the development backend.
+[33mbbae4f7[m Add structure to the layout of 'auth' module.
+[33mf458327[m Add html structure in login and register page.
+[33m59c5cf0[m Add the Angular Material components we'll use.
+[33m298ae4f[m Add PrimeFlex styles, so we can use its helpers.
+[33m51ee568[m Install Angular Materia package.
+[33m169cb5b[m Add routing, use layouts to have children routes
+[33m068f764[m Prepare project structure for future work.
+[33m6c1f4a6[m initial commit
