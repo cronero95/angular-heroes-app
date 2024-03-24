@@ -1,1 +1,88 @@
-<p>new-hero-page works!</p>
+<h2>
+  Edit <small>superhero</small>
+</h2>
+
+<mat-divider class="mb-2"></mat-divider>
+
+<div class="grid">
+
+  <div class="col-12 sm:col-6">
+
+    <mat-card>
+      <mat-card-content>
+
+        <div class="grid">
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Super Hero</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+            >
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Alter Ego</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+            >
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>First Appearance</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+            >
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Characters</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+            >
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Publisher</mat-label>
+            <mat-select required>
+              <mat-option *ngFor="let publisher of publishers" [value]="publisher.id">
+                {{ publisher.desc }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+
+        <div class="flex justify-content-between">
+
+          <button mat-flat-button color="warn">
+            Clear
+          </button>
+
+          <button mat-flat-button color="primary">
+            Save <mat-icon>save</mat-icon>
+          </button>
+
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+
+  <div class="col-12 sm:col-6">
+
+    <mat-card>
+      <img src="" [alt]="" matCardImage>
+    </mat-card>
+
+  </div>
+
+</div>
